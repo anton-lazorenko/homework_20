@@ -7,7 +7,7 @@ else {
     const randomNumber = Math.floor(Math.random() * 10) + 1; 
     let yourNumber = prompt("выбери число от 1 до 10")
     let checkNumber = isNaN(yourNumber)
-    if ( checkNumber === true) {
+    if (checkNumber === true) {
         alert("Выбрано не числовое значение")
     }
     else if (+yourNumber == randomNumber) {
