@@ -3,21 +3,21 @@ let result = confirm('Ты готов приступить к игре?');
 if (result === false) {
     alert("Возможно в другой раз. До свидания")
 }
-else {
+else {  
     const randomNumber = Math.floor(Math.random() * 10) + 1; 
     let yourNumber = prompt("выбери число от 1 до 10")
     let checkNumber = isNaN(yourNumber)
-    if ( checkNumber === true) {
+    if (checkNumber === true) { // проверка числового значения
         alert("Выбрано не числовое значение")
     }
-    else if (+yourNumber == randomNumber) {
+    else if (+yourNumber == randomNumber) { // приравниваем число которое ввел пользователь и число которой выдал рандомайзер. если число совпало выводим этот результат
         alert('Поздравляю! Ты угадал') 
     }
-    else if (yourNumber > 10) {
+    else if (yourNumber > 10) { // если пользователь выбрал число больше чем 10
         alert("Ты выбрал число больше чем 10")
-    } else if (yourNumber <= 0) {
+    } else if (yourNumber <= 0) { // если пользователь выбрал число меньше чем 1
         alert("Ты выбрал число меньше чем 1")
     } else {
-        alert("Неудача! Верное число:" +  " " + (randomNumber) + " " + "Попробуй снова!")
+        alert("Неудача! Верное число:" + " " + (randomNumber) + " " + "Попробуй снова!") // если пользователь не угадал выводим этот результат
     } 
 }
